@@ -3,11 +3,13 @@ import PropTypes from 'prop-types'
 import { Link, matchPath, useLocation } from 'react-router-dom'
 import slug from 'slug'
 
+import { Loading } from './Loading'
+
 export const Sidebar = ({ title, list, loading, match }) => {
   const location = useLocation()
 
   return loading === true
-    ? <h1>LOADING</h1>
+    ? <Loading />
     : (
       <div>
         <h3 className="header">{title}</h3>

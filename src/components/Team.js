@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
+import { Loading } from './Loading'
 import { getTeam } from '../api'
 
 export const Team = ({ children }) => {
@@ -19,7 +20,11 @@ export const Team = ({ children }) => {
   }, [teamId])
 
   if (loading) {
-    return <div className="sidebar-instruction">loading...</div>
+    return (
+      <div className="sidebar-instruction">
+        <Loading />
+      </div>
+    )
   }
 
   return (

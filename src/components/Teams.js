@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, Route, useRouteMatch } from 'react-router-dom'
 
+import { Loading } from './Loading'
 import { Sidebar } from './Sidebar'
 import { Team } from './Team'
 import { TeamLogo } from './TeamLogo'
@@ -31,10 +32,12 @@ export const Teams = () => {
 
       <Route path={`${match.url}/:teamId`}>
         <Team>
-          {team => (
-            <div style={{ width: '100%' }}>
-              <TeamLogo id={team.id} className="center" />
-              <h1 className="medium-header">{team.name}</h1>
+          {team => team === null
+            ? <Loading />
+            : (
+              <div style={{ width: '100%' }}>
+                <TeamLogo id={team.id} className="center" />
+                <h1 className="medium-header">{team.name}</h1>
               <ul className="info-list row">
                 <li>Established <div>{team.established}</div></li>
                 <li>Manager <div>{team.manager}</div></li>
