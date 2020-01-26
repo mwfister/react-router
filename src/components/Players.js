@@ -21,7 +21,7 @@ export const Players = () => {
       setLoading(false)
     }
     fetchPlayers(teamId)
-  }, [location])
+  }, [location.search])
 
   return (
     <section className="container two-column">
@@ -32,9 +32,10 @@ export const Players = () => {
         : null
       }
 
-      <Route path="/players/:playerId">
-        {!loading && <Player players={players} />}
+      <Route path={`${match.path}/:playerId`}>
+        {loading ? null : <Player players={players} />}
       </Route>
+
     </section>
   )
 }

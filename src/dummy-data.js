@@ -2,6 +2,7 @@ import slug from 'slug'
 
 const players = [
   {name: 'Tyler McGinnis', position: 'Point Guard', teamId: 'bulls', number: 33, avatar: 'https://avatars.io/twitter/tylermcginnis', rpg: 3, spg: 4, apg: 8, ppg: 12},
+  {name: 'Marc Fister', position: 'Center', teamId: 'koalas', number: 69, avatar: 'https://github.com/mwfister.png', rpg: 3, spg: 4, apg: 8, ppg: 12},
   {name: 'Jared Palmer', position: 'Shooting Guard', teamId: 'bulls', number: 15, avatar: 'https://avatars.io/twitter/jaredpalmer', rpg: 5, spg: 2, apg: 4, ppg: 15},
   {name: 'Val Head', position: 'Shooting Forward', teamId: 'bulls', number: 1, avatar: 'https://avatars.io/twitter/vlh', rpg: 6, spg: 2, apg: 3, ppg: 13},
   {name: 'Dan Abramov', position: 'Power Forward', teamId: 'bulls', number: 99, avatar: 'https://avatars.io/twitter/dan_abramov', rpg: 8, spg: 1, apg: 2, ppg: 10},
