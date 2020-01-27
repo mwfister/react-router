@@ -1,13 +1,10 @@
 import React from 'react'
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 
+import { DynamicImport } from './DynamicImport'
 import { Home } from './Home'
 import { Navbar } from './Navbar'
 import { PageNotFound } from './PageNotFound'
-import { Players } from './Players'
-import { TeamDetail } from './TeamDetail'
-import { Teams } from './Teams'
-import { Articles } from './Articles'
 
 export const App = () => {
   return (
@@ -18,16 +15,16 @@ export const App = () => {
           <Home />
         </Route>
         <Route path='/players'>
-          <Players />
+          <DynamicImport load={() => import('./Players')} name="Players" key="Players"/>
         </Route>
         <Route path='/teams'>
-          <Teams />
+          <DynamicImport load={() => import('./Teams')} name="Teams" key="Teams"/>
         </Route>
         <Route path='/:teamId' exact>
-          <TeamDetail />
+          <DynamicImport load={() => import('./TeamDetail')} name="TeamDetail" key="TeamDetail"/>
         </Route>
         <Route path='/:teamId/articles'>
-          <Articles />
+          <DynamicImport load={() => import('./Articles')} name="Articles" key="Articles"/>
         </Route>
         <Route>
           <PageNotFound />

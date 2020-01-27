@@ -3,6 +3,8 @@ import { Link, useParams } from 'react-router-dom'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import slug from 'slug'
 
+import { LazyImage } from './LazyImage'
+
 export const Player = ({ players }) => {
   const { playerId } = useParams()
 
@@ -13,7 +15,7 @@ export const Player = ({ players }) => {
     <TransitionGroup className="panel">
       <CSSTransition classNames="fade" timeout={200} key={playerId}>
         <div className="panel">
-          <img src={player.avatar} alt={player.name} className="avatar" />
+          <LazyImage src={player.avatar} alt={player.name} />
           <h1 className="medium-header">{player.name}</h1>
           <h3 className="header">#{player.number}</h3>
           <div className="row">
@@ -26,7 +28,7 @@ export const Player = ({ players }) => {
                   </Link>
                 </div>
               </li>
-              <li>Position<div>{player.positon}</div></li>
+              <li>Position<div>{player.position}</div></li>
               <li>PPG<div>{player.ppg}</div></li>
             </ul>
             <ul className="info-list">

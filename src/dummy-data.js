@@ -2,8 +2,8 @@ import slug from 'slug'
 
 const players = [
   {name: 'Tyler McGinnis', position: 'Point Guard', teamId: 'bulls', number: 33, avatar: 'https://avatars.io/twitter/tylermcginnis', rpg: 3, spg: 4, apg: 8, ppg: 12},
-  {name: 'Marc Fister', position: 'Center', teamId: 'koalas', number: 69, avatar: 'https://github.com/mwfister.png', rpg: 3, spg: 4, apg: 8, ppg: 12},
-  {name: 'Jared Palmer', position: 'Shooting Guard', teamId: 'bulls', number: 15, avatar: 'https://avatars.io/twitter/jaredpalmer', rpg: 5, spg: 2, apg: 4, ppg: 15},
+  {name: 'Marc Fister', position: 'Center', teamId: 'bulls', number: 69, avatar: 'https://github.com/mwfister.png', rpg: 3, spg: 4, apg: 8, ppg: 12},
+  {name: 'Jared Palmer', position: 'Shooting Guard', teamId: 'bulls', number: 15, avatar: 'https://avatars.io/twitter/au_norak', rpg: 5, spg: 2, apg: 4, ppg: 15},
   {name: 'Val Head', position: 'Shooting Forward', teamId: 'bulls', number: 1, avatar: 'https://avatars.io/twitter/vlh', rpg: 6, spg: 2, apg: 3, ppg: 13},
   {name: 'Dan Abramov', position: 'Power Forward', teamId: 'bulls', number: 99, avatar: 'https://avatars.io/twitter/dan_abramov', rpg: 8, spg: 1, apg: 2, ppg: 10},
   {name: 'Bonnie Eisenman', position: 'Center', teamId: 'bulls', number: 11, avatar: 'https://avatars.io/twitter/brindelle', rpg: 10, spg: 1, apg: 1, ppg: 10},
@@ -26,10 +26,21 @@ const players = [
   {name: 'Aimee Knight', position: 'Shooting Guard', teamId: 'koalas', number: 26, avatar: 'https://avatars.io/twitter/Aimee_Knight', rpg: 5, spg: 2, apg: 4, ppg: 15},
   {name: 'Brian Holt', position: 'Shooting Forward', teamId: 'koalas', number: 36, avatar: 'https://avatars.io/twitter/holtbt', rpg: 6, spg: 2, apg: 3, ppg: 13},
   {name: 'Ben Alpert', position: 'Power Forward', teamId: 'koalas', number: 54, avatar: 'https://avatars.io/twitter/soprano', rpg: 8, spg: 1, apg: 2, ppg: 10},
-  {name: 'Ken Wheeler', position: 'Center', teamId: 'koalas', number: 69, avatar: 'https://avatars.io/twitter/ken_wheeler', rpg: 10, spg: 1, apg: 1, ppg: 10},
+  {name: 'Ken Wheeler', position: 'Center', teamId: 'koalas', number: 2, avatar: 'https://avatars.io/twitter/ken_wheeler', rpg: 10, spg: 1, apg: 1, ppg: 10},
 ]
 
 const teams = {
+  koalas: {
+    id: 'koalas',
+    name: 'Koalas',
+    wins: 55,
+    losses: 27,
+    established: 2005,
+    coach: 'David Nolen',
+    manager: 'Tereza Sokol',
+    championships: [2006, 2009, 2010],
+    players: players.slice(21, 26),
+  },
   bulls: {
     id: 'bulls',
     name: 'Bulls',
@@ -39,7 +50,7 @@ const teams = {
     coach: 'Addy Osmani',
     manager: 'Todd Motto',
     championships: [1998, 1999, 2001, 2004, 2005, 2008, 2011, 2013, 2014, 2015],
-    players: players.slice(0, 5),
+    players: players.slice(0, 6),
   },
   foxes: {
     id: 'foxes',
@@ -73,17 +84,6 @@ const teams = {
     manager: 'Lee Byron',
     championships: [2007, 2009],
     players: players.slice(15, 20),
-  },
-  koalas: {
-    id: 'koalas',
-    name: 'Koalas',
-    wins: 55,
-    losses: 27,
-    established: 2005,
-    coach: 'David Nolen',
-    manager: 'Tereza Sokol',
-    championships: [2006, 2009, 2010],
-    players: players.slice(20, 25),
   },
 }
 
