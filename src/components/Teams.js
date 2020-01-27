@@ -23,7 +23,7 @@ export const Teams = () => {
 
   return (
     <section className="container two-column">
-      <Sidebar title="Teams" loading={loading} match={match} list={teams} />
+      <Sidebar title="Teams" loading={loading} list={teams} />
 
       {loading === false && match.isExact
         ? <div className="sidebar-instruction">Select a team</div>

@@ -27,7 +27,7 @@ export const Articles = () => {
     ? <Loading />
       : (
       <div className="two-column container">
-        <Sidebar loading={loading} title="Articles" list={articles} match={match} />
+        <Sidebar loading={loading} title="Articles" list={articles} />
 
         <Route path={`${match.path}/:articleId`}>
           <Article teamId={teamId}>

@@ -25,7 +25,7 @@ export const Players = () => {
 
   return (
     <section className="container two-column">
-      <Sidebar list={players.map(player => player.name)} match={match} loading={loading} title="Players" />
+      <Sidebar list={players.map(player => player.name)} loading={loading} title="Players" />
 
       {loading === false && match.isExact
         ? <div className="sidebar-instruction">Select a Player</div>

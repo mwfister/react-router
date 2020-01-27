@@ -20,6 +20,9 @@ export const App = () => {
         <Route path='/teams'>
           <DynamicImport load={() => import('./Teams')} name="Teams" key="Teams"/>
         </Route>
+        <Route path='/form'>
+          <DynamicImport load={() => import('./BlockedTransition')} name="BlockedTransition" key="BlockedTransition"/>
+        </Route>
         <Route path='/:teamId' exact>
           <DynamicImport load={() => import('./TeamDetail')} name="TeamDetail" key="TeamDetail"/>
         </Route>
